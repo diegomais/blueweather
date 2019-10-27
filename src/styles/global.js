@@ -22,6 +22,7 @@ export default createGlobalStyle`
   body {
     -webkit-font-smoothing: antialiased; /* Smooth the font on the level of the pixel. */
     -moz-osx-font-smoothing: grayscale; /* Render text with grayscale antialiasing. */
+    background-color: #0067af
   }
 
   body, input, button {
