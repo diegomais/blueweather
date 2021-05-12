@@ -15,5 +15,9 @@ instance/
 venv/
 ENV/
 
+# Tests
+.coverage
+htmlcov/
+
 # VS Code
 .vscode/

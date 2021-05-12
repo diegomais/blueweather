@@ -98,6 +98,43 @@ flask run
 
 You can now use the application at [http://localhost:5000](http://localhost:5000).
 
+### Running the tests
+
+To run the tests, use the `pytest` command. It will find and run all the test functions.
+
+```bash
+pytest
+```
+
+To measure the code coverage of tests, use the coverage command to run pytest instead of running it directly.
+
+```bash
+coverage run -m pytest
+```
+
+You can either view a simple coverage report in the terminal:
+
+```bash
+$ coverage report
+
+Name                 Stmts   Miss Branch BrPart  Cover
+------------------------------------------------------
+flaskr/__init__.py      21      0      2      0   100%
+flaskr/auth.py          54      0     22      0   100%
+flaskr/blog.py          54      0     16      0   100%
+flaskr/db.py            24      0      4      0   100%
+------------------------------------------------------
+TOTAL                  153      0     44      0   100%
+```
+
+An HTML report allows you to see which lines were covered in each file:
+
+```bash
+coverage html
+```
+
+This generates files in the htmlcov directory. Open htmlcov/index.html in your browser to see the report.
+
 ## :thinking: How to contribute
 
 - Fork this repository;
