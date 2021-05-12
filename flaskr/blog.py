@@ -18,8 +18,8 @@ def index():
     return render_template("blog/index.html", posts=posts)
 
 
-@login_required
 @bp.route("/create", methods=("GET", "POST"))
+@login_required
 def create():
     if request.method == "POST":
         title = request.form.get("title", False)
@@ -64,8 +64,8 @@ def get_post(id, check_author=True):
     return post
 
 
-@login_required
 @bp.route("/<int:id>/update", methods=("GET", "POST"))
+@login_required
 def update(id):
     post = get_post(id)
 
@@ -91,8 +91,8 @@ def update(id):
     return render_template("blog/update.html", post=post)
 
 
-@login_required
 @bp.route("/<int:id>/delete", methods=("GET", "POST"))
+@login_required
 def delete(id):
     get_post(id)
     db = get_db()
