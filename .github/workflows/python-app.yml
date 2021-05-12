@@ -33,6 +33,9 @@ jobs:
         pylint --exit-zero --verbose flaskr
         # check files for formatting
         black --check --diff -v .
+    - name: Install the project
+      run: |
+        pip install -e .
     - name: Test with pytest
       run: |
         pytest
