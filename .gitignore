@@ -6,6 +6,7 @@ __pycache__/
 # Flask:
 instance/
 .webassets-cache
+*.egg-info/
 
 # dotenv
 .env
